@@ -13,7 +13,7 @@ def sort_function(liste_fichiers):
   ...
 
 ### Partie numéro 4:
-def filter_function(liste_fichiers, TAILLE_MINI_FICHIER_EN_MEGA_OCTET_, NB_MAXI_FICHIERS):
+def filter_function(liste_fichiers, TAILLE_MINI_FICHIER_EN_MEGA_OCTET, NB_MAXI_FICHIERS):
   ...
 
 ### Partie numéro 5:
