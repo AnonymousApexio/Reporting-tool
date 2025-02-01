@@ -55,20 +55,20 @@ def main():
     print(f"Analyse du répertoire : {repertoire}")
     
     # Exploration
-    fichiers = explorer_fichiers(repertoire)
+    fichiers = build_list(repertoire_de_base)
     print(f"📄 {len(fichiers)} fichiers détectés.")
     
     # Tri
-    fichiers_tries = trier_par_taille(fichiers)
+    fichiers_tries = sort_function(fichiers)
     
     # Filtrage
     TAILLE_MIN = 1  # Mo
     NB_MAX = 100
-    fichiers_final = filtrer_fichiers(fichiers_tries, TAILLE_MIN, NB_MAX)
+    fichiers_final = filter_function(fichiers_tries, TAILLE_MIN, NB_MAX)
     print(f"🎯 {len(fichiers_final)} fichiers retenus après filtrage.")
     
     # Export
-    generer_json(fichiers_final, "gros_fichiers.json")
+    build_json(fichiers_final, "gros_fichiers.json")
   
 if __name__ == '__main__':
     main()
