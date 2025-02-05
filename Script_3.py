@@ -8,6 +8,8 @@ from Creation_Onglets import Onglets
 from Creation_Camembert import Camembert
 from Creation_Legendes import Legendes
 from Creation_Boutons import Boutons
+import subprocess
+
 
 NB_MAXI_FICHIERS = 100
 NB_LEGENDES_PAR_PAGE = 25
@@ -47,6 +49,11 @@ def creer_script_suppression(liste_fichiers, etats_cases):
         f.write("} else { Write-Output \"Opération annulée\" }\n")
     print("Script de suppression généré.")
 
+    # Exécuter le script PowerShell
+    try:
+        subprocess.run(["powershell", "-File", str(script_path)], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors de l'exécution du script PowerShell: {e}")
 
 def main():
     """Programme principal d'affichage graphique."""
