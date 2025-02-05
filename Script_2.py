@@ -1,6 +1,6 @@
 ### Script numéro 2
 
-# Partie numéro 1:
+# partie numéro 1:
 import json
 import sys
 from pathlib import Path
@@ -20,7 +20,7 @@ def build_list(repertoire_de_base: Path) -> list:
                 taille = 0
             liste_fichiers.append([str(fichier.resolve()), taille])
     if liste_fichiers:
-        print("Some files detected:", liste_fichiers[:3])
+        print("Some files detected:", liste_fichiers[:25])
     return liste_fichiers
 
 # Partie numéro 3:
