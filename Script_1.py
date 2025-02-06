@@ -6,7 +6,7 @@ from pathlib import Path
 from PyQt5.QtWidgets import QApplication, QFileDialog, QWidget
 
 ### Partie 2:
-def choisir_repertoire() -> Path | None:
+def choisir_repertoire():
     """
     Ouvre une boîte de dialogue pour sélectionner un répertoire
     Nous donne le chemin sélectionné sous forme d’objet "Path", ou None si annuléer
