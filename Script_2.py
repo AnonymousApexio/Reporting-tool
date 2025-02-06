@@ -63,7 +63,7 @@ def main():
     fichiers_tries = sort_function(liste_fichiers)
     
     # Filtrage
-    TAILLE_MIN = 0  # Mo
+    TAILLE_MIN = 5  # Mo
     NB_MAX = 100
     fichiers_final = filter_function(fichiers_tries, TAILLE_MIN, NB_MAX)
     print(f"{len(fichiers_final)} fichiers retenus après filtrage.")
