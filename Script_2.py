@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 # Partie numéro 2:
-def build_list(repertoire_de_base: Path) -> list:
+def build_list(repertoire_de_base: Path):
     """
     Explore récursivement le répertoire pour récupérer la liste des fichiers avec leur taille.
     Chaque élément est une liste : [chemin absolu (str), taille en octets (int)].
@@ -24,7 +24,7 @@ def build_list(repertoire_de_base: Path) -> list:
     return liste_fichiers
 
 # Partie numéro 3:
-def sort_function(liste_fichiers: list) -> list:
+def sort_function(liste_fichiers: list):
     """Trie les fichiers du plus gros au plus petit."""
     return sorted(liste_fichiers, key=lambda x: x[1], reverse=True)
 
@@ -38,7 +38,7 @@ def filter_function(liste_fichiers: list, TAILLE_MINI_FICHIER_EN_MEGA_OCTET: flo
     return fichiers_filtres[:NB_MAXI_FICHIERS]  # Limite à NB_MAXI_FICHIERS fichiers
 
 # Partie numéro 5:
-def build_json(liste_fichiers: list, nom_fichier: str) -> None:
+def build_json(liste_fichiers: list, nom_fichier: str):
     """
     Sauvegarde la liste des fichiers sous forme de JSON.
     """
@@ -70,6 +70,6 @@ def main():
     
     # Export
     build_json(fichiers_final, "gros_fichiers.json")
-  
+
 if __name__ == '__main__':
     main()
