@@ -15,7 +15,7 @@ def choisir_repertoire() -> Path | None:
     widget = QWidget()
     widget.hide()  # Empêche l’affichage d’une fenêtre superflue
     
-    dossier = QFileDialog.getExistingDirectory(widget, "Sélectionnez un répertoire", str(Path.home()))
+    dossier = QFileDialog.getExistingDirectory(widget, "Selectionnez un repertoire", str(Path.home()))
     
     return Path(dossier) if dossier else None
 
@@ -26,7 +26,7 @@ def main():
     
     # Validation et affichage
     if repertoire_de_base:
-        print(f"Répertoire sélectionné : {repertoire_de_base}")
+        print(f"{repertoire_de_base}")
     else:
         print("Aucun répertoire sélectionné.")
     
