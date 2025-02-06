@@ -39,7 +39,7 @@ def creer_script_suppression(liste_fichiers, etats_cases):
         f.write("Write-Output \"Script de suppression de fichiers\"\n")
         f.write("$reponse = Read-Host \"Confirmer suppression (OUI)\"\n")
         f.write("if ($reponse -eq 'OUI') {\n")
-        f.write("    $confirmation = Read-Host \"Etes-vous sûr ? (OUI)\"\n")
+        f.write("    $confirmation = Read-Host \"Etes-vous sur ? (OUI)\"\n")
         f.write("    if ($confirmation -eq 'OUI') {\n")
         for fichier, etat in zip(liste_fichiers, etats_cases):
             if etat:
